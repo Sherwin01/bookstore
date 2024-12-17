@@ -62,14 +62,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="loginForm" onsubmit="return validateLoginForm()">
                         <div class="mb-3">
                             <label for="loginUsername" class="form-label">Username</label>
-                            <input type="username" class="form-control" id="loginUsername" required>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                            <div class="invalid-feedback">Please enter your username.</div>
                         </div>
                         <div class="mb-3">
                             <label for="loginPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="loginPassword" required>
+                            <input type="password" class="form-control" id="loginPassword" required minlength="6">
+                            <div class="invalid-feedback">Password must be at least 6 characters long.</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Login</button>
                     </form>
@@ -87,22 +89,26 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="registerForm" onsubmit="return validateRegisterForm()">
                         <div class="mb-3">
                             <label for="registerUsername" class="form-label">Username</label>
-                            <input type="username" class="form-control" id="registerUsername" required>
+                            <input type="text" class="form-control" id="registerUsername" required>
+                            <div class="invalid-feedback">Please enter a username.</div>
                         </div>
                         <div class="mb-3">
                             <label for="registerEmail" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="registerEmail" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
                         <div class="mb-3">
                             <label for="registerPassword" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="registerPassword" required>
+                            <input type="password" class="form-control" id="registerPassword" required minlength="6">
+                            <div class="invalid-feedback">Password must be at least 6 characters long.</div>
                         </div>
                         <div class="mb-3">
                             <label for="registerConfirmPassword" class="form-label">Confirm Password</label>
                             <input type="password" class="form-control" id="registerConfirmPassword" required>
+                            <div class="invalid-feedback">Passwords do not match.</div>
                         </div>
                         <button type="submit" class="btn btn-primary w-100">Register</button>
                     </form>
@@ -115,25 +121,24 @@
     <footer class="bg-light text-center py-4 mt-5">
         <div class="container">
             <p>&copy; 2024 Bookstore. All rights reserved.</p>
-
-            <!-- Contact Information -->
             <p>Contact Us: <a href="mailto:sample@gmail.com">sample@gmail.com</a></p>
-
-            <!-- Social Media Links -->
             <div>
                 <a href="https://facebook.com" target="_blank" class="btn">
-                    <i class="bx bxl-facebook"></i> 
+                    <i class="bx bxl-facebook"></i>
                 </a>
                 <a href="https://twitter.com" target="_blank" class="btn">
-                    <i class="bx bxl-twitter"></i> 
+                    <i class="bx bxl-twitter"></i>
                 </a>
                 <a href="https://instagram.com" target="_blank" class="btn">
-                    <i class="bx bxl-instagram"></i> 
+                    <i class="bx bxl-instagram"></i>
                 </a>
             </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    
 </body>
 </html>
