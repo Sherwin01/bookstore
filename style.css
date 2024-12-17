@@ -50,3 +50,16 @@
         font-size: 1rem; 
     }
 }
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.footer p {
+    margin: 0;
+    color: #555;
+}
