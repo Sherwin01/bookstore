@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero-section {
-    background: url('/img/hero-img2.jpg') no-repeat center center;
+    background: url('img/hero-img2.jpg') no-repeat center center;
     background-size: auto;
     height: 85vh;
     text-align: center;
@@ -15,6 +15,7 @@
     font-size: 3rem;
     font-weight: bold;
     color: #1F509A;
+    margin: 0 0 20px;
 }
 
 .hero-section p {
